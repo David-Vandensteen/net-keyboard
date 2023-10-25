@@ -1,0 +1,35 @@
+{
+  "name": "net-keyboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/net-keyboard-client.js",
+  "type": "module",
+  "imports": {
+    "#src/*": "./src/*.js"
+  },
+  "scripts": {
+    "lint": "eslint src bin test",
+    "serve": "nodemon --watch src -e js src/index.js",
+    "start:client": "node test/keyboard-client.js",
+    "start:server": "node test/keyboard-server.js",
+    "cli": "node bin/net-keyboard-client.js"
+  },
+  "bin": {
+    "net-keyboard-client": "./bin/net-keyboard-client.js"
+  },
+  "author": "David Vandensteen <dvandensteen@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.29.0",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "app-root-path": "^3.1.0",
+    "arg": "^5.0.2",
+    "fs-extra": "^11.1.1",
+    "netcat": "^1.5.0"
+  }
+}
