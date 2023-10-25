@@ -1,6 +1,6 @@
 {
   "name": "net-keyboard",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "bin/net-keyboard-client.js",
   "type": "module",
