@@ -3,6 +3,8 @@ import { client as Client } from 'netcat';
 import { Keyboard } from '#src/lib/keyboard';
 import encode from '#src/lib/encode';
 
+const { log } = console;
+
 export default class ClientService {
   #host;
   #port;
@@ -21,6 +23,7 @@ export default class ClientService {
       .port(this.#port)
       .connect();
 
+    log('connect to', this.#host, this.#port);
     new Keyboard()
       .on('keypress', (key) => {
         const encoded = encode(Buffer.from(JSON.stringify(key)));

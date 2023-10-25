@@ -2,6 +2,8 @@ import { EventEmitter } from 'events';
 import { server as Server } from 'netcat';
 import decode from '#src/lib/decode';
 
+const { log } = console;
+
 export default class ServerService extends EventEmitter {
   #port;
 
@@ -21,6 +23,7 @@ export default class ServerService extends EventEmitter {
             this.emit('message', message);
           });
       });
+    log('serve from port', this.#port);
   }
 }
 
