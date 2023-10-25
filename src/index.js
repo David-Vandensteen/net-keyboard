@@ -1,7 +1,7 @@
-import { ClientService } from '#src/service/client';
-import { ServerService } from '#src/service/server';
+import { ClientService as NetKeyboardClient } from '#src/service/client';
+import { ServerService as NetKeyboardServer } from '#src/service/server';
 
 export {
-  ClientService,
-  ServerService,
+  NetKeyboardClient,
+  NetKeyboardServer,
 };
