@@ -1,8 +1,11 @@
-import Netcat from 'netcat';
+import { client as Client } from 'netcat';
 
-const NetcatClient = Netcat.client;
-
-new NetcatClient()
+const client = new Client()
   .port(8080)
   .connect()
-  .send('hello');
+  .send('hello')
+  .send('hellu');
+
+setTimeout(() => {
+  client.send('helli');
+}, 5000);
