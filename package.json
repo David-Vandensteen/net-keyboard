@@ -10,7 +10,8 @@
   "scripts": {
     "lint": "eslint src bin test",
     "serve": "nodemon --watch src -e js src/index.js",
-    "start": "node src/index.js",
+    "start:client": "node test/keyboard-client.js",
+    "start:server": "node test/keyboard-server.js",
     "cli": "node bin/net-keyboard-client.js"
   },
   "bin": {
