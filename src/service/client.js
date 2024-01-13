@@ -24,12 +24,14 @@ export default class ClientService {
       .connect();
 
     log('connect to', this.#host, this.#port);
+
     new Keyboard()
       .on('keypress', (key) => {
         const encoded = encode(Buffer.from(JSON.stringify(key)));
         this.#netcatClient.send(encoded);
       })
       .start();
+
     return this;
   }
 }
