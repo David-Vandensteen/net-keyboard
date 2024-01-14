@@ -11,7 +11,7 @@ export default class Keyboard extends EventEmitter {
 
   start() {
     emitKeypressEvents(this.stdin);
-    if (this.stdin.setRawMode) this.stdin.setRawMode(this.true);
+    if (this.stdin.setRawMode) this.stdin.setRawMode(true);
     this.stdin.on('keypress', this.handleKeyPress.bind(this));
   }
 
