@@ -13,6 +13,7 @@
     "start": "node bin/net-keyboard-client.js",
     "start:client": "node test/keyboard_client.js",
     "start:server": "node test/keyboard_server.js",
+    "test:nodemon": "nodemon --watch src -e js node test/keyboard_local.js",
     "cli": "node bin/net-keyboard-client.js"
   },
   "bin": {
