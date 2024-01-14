@@ -7,12 +7,11 @@ export default class Keyboard extends EventEmitter {
     super();
     this.stdin = process.stdin;
     this.ctrlCKey = 'c';
-    this.rawMode = true;
   }
 
   start() {
     emitKeypressEvents(this.stdin);
-    this.stdin.setRawMode(this.rawMode);
+    if (this.stdin.setRawMode) this.stdin.setRawMode(this.true);
     this.stdin.on('keypress', this.handleKeyPress.bind(this));
   }
 

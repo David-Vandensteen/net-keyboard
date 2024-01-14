@@ -18,7 +18,7 @@ export default class ServerService extends EventEmitter {
 
     new Keyboard()
       .on('keypress', (key) => {
-        this.emit('data', key);
+        this.emit('data', JSON.stringify(key));
       })
       .start();
 

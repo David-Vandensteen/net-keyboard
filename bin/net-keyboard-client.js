@@ -2,5 +2,7 @@
 import { argService } from '#src/service/arg';
 import { NetKeyboardClient } from '#src/index';
 
-new NetKeyboardClient(argService.host, argService.port)
+const { host, port } = argService.get();
+
+new NetKeyboardClient(host, port)
   .connect();

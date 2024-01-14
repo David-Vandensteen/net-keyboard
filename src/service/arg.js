@@ -21,6 +21,7 @@ const showHelp = () => {
   log('     Extra options:');
   log('');
   log('   --help                      -- show help');
+  log('');
   log('version', version, author, license);
   process.exit(0);
 };
