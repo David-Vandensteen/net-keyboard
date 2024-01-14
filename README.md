@@ -2,7 +2,7 @@
 
 ## Install
 ```cmd
-npm i git@github.com:David-Vandensteen/net-keyboard.git#release/2.0.0
+npm i git@github.com:David-Vandensteen/net-keyboard.git#release/2.0.1
 ```
 
 ## Examples
